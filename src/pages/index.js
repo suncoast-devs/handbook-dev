@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Container, Notification } from 'bloomer'
 
 const PageRow = ({ page }) => (
   <tr>
@@ -10,13 +11,23 @@ const PageRow = ({ page }) => (
   </tr>
 )
 
-const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
+}) => {
   return (
-    <table>
-      <tbody>
-        {edges.map(edge => <PageRow key={edge.node.id} page={edge.node} />)}
-      </tbody>
-    </table>
+    <Container>
+      <Notification>
+        <strong>NOTE:</strong> This site is intended for rapid authoring of
+        pages in dev mode. Content here is deployed as part of the main website.
+      </Notification>
+      <table>
+        <tbody>
+          {edges.map(edge => <PageRow key={edge.node.id} page={edge.node} />)}
+        </tbody>
+      </table>
+    </Container>
   )
 }
 
