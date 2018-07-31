@@ -1,5 +1,7 @@
 # Handbook Development
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A little dev tool for previewing changes the SDG handbook.
 
 ## Setup
